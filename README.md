@@ -25,8 +25,8 @@ NASA APOD uses NASA's public `DEMO_KEY`; no NASA account or secret is required.
 ## Quick Start
 
 ```bash
-git clone https://github.com/nv-drollins/nemoclaw-nasa-apod.git
-cd nemoclaw-nasa-apod
+git clone https://github.com/nv-drollins/nemoclaw-nasa.git
+cd nemoclaw-nasa
 
 NEMOCLAW_MODEL=nemotron-3-nano:30b ./scripts/onboard-nemoclaw.sh
 ./scripts/start-demo.sh
