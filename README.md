@@ -14,6 +14,22 @@ Use an Ubuntu host with:
 - `git`, `curl`, `python3`, `ssh`, and `scp`
 - Passwordless sudo for the user running the demo
 
+### Configure Docker GPU runtime
+
+DGX Spark systems may include the NVIDIA Container Toolkit out of the box, but
+Docker still needs the NVIDIA runtime configured:
+
+```bash
+sudo nvidia-ctk runtime configure --runtime=docker
+sudo systemctl restart docker
+```
+
+Optional verification:
+
+```bash
+sudo docker run --rm --runtime=nvidia --gpus all ubuntu nvidia-smi
+```
+
 ### Install and expose Ollama
 
 The NemoClaw sandbox must be able to reach the host Ollama server. Install
