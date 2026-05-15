@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 SANDBOX="${NEMOCLAW_SANDBOX_NAME:-apod-agent}"
 MODEL="${NEMOCLAW_MODEL:-nemotron-3-nano:30b}"
 OLLAMA_WRAPPER_DIR="$(mktemp -d)"
@@ -176,6 +178,7 @@ EOF
 fi
 export PATH="$OLLAMA_WRAPPER_DIR:$PATH"
 
+bash "$SCRIPT_DIR/ensure-sudo.sh"
 ensure_nvidia_cdi_specs
 
 echo "Onboarding sandbox '$SANDBOX' with Ollama model '$MODEL'"

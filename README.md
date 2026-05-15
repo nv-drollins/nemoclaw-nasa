@@ -4,6 +4,14 @@ Self-contained NemoClaw/OpenClaw demo that lets a local agent fetch NASA's Astro
 
 This repo includes the NemoClaw onboarding wrapper, the APOD skill, the APOD network policy, dashboard URL/token helper, smoke test, and stop/start scripts. No Blender repo or external demo checkout is required.
 
+## Sudo Prompts
+
+First-time setup may need sudo for host packages, Docker/NVIDIA toolkit configuration, or setup preflight checks. Passwordless sudo is not required, but install commands must run from an interactive terminal so sudo can prompt. When installing over SSH, use:
+
+```bash
+ssh -t nvidia@<spark-ip>
+```
+
 ## Before You Begin
 
 Use an Ubuntu host with:
