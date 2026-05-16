@@ -20,7 +20,7 @@ Use an Ubuntu host with:
 - Docker
 - Ollama running on port `11434`
 - `git`, `curl`, `python3`, `ssh`, and `scp`
-- Passwordless sudo for the user running the demo
+- sudo access for first-time host setup; passwordless sudo is not required
 
 ### Enable Docker access without sudo
 
